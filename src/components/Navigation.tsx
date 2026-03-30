@@ -1,9 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Play } from 'lucide-react'
 
-export function Navigation() {
+interface NavigationProps {
+  onPresentationModeToggle?: () => void
+}
+
+export function Navigation({ onPresentationModeToggle }: NavigationProps) {
   const [isVisible, setIsVisible] = useState(true)
   const [activeSection, setActiveSection] = useState('')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -55,6 +59,7 @@ export function Navigation() {
 
   const navLinks = [
     { href: '#projects', label: 'Проекты' },
+    { href: '#experience', label: 'Опыт' },
     { href: '#skills', label: 'Навыки' },
     { href: '#contact', label: 'Контакты' },
   ]
@@ -74,7 +79,7 @@ export function Navigation() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -92,6 +97,18 @@ export function Navigation() {
               )}
             </a>
           ))}
+
+          {/* Presentation Mode Button */}
+          {onPresentationModeToggle && (
+            <button
+              onClick={onPresentationModeToggle}
+              className="flex items-center gap-2 px-4 py-2 bg-indigo-600/20 text-indigo-500 hover:bg-indigo-600 hover:text-white rounded-lg transition-all text-sm font-medium"
+              aria-label="Start presentation mode"
+            >
+              <Play size={14} />
+              <span className="hidden lg:inline">Презентация</span>
+            </button>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -122,6 +139,18 @@ export function Navigation() {
                 {link.label}
               </a>
             ))}
+            {onPresentationModeToggle && (
+              <button
+                onClick={() => {
+                  onPresentationModeToggle()
+                  setIsMobileMenuOpen(false)
+                }}
+                className="flex items-center gap-2 px-4 py-2 bg-indigo-600/20 text-indigo-500 hover:bg-indigo-600 hover:text-white rounded-lg transition-all text-sm font-medium text-left"
+              >
+                <Play size={14} />
+                <span>Презентация</span>
+              </button>
+            )}
           </div>
         </div>
       )}

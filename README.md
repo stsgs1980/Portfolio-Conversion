@@ -4,14 +4,44 @@ Modern portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and sh
 
 ## Features
 
+### Core Features
 - Modern dark industrial design
 - Responsive layout with mobile support
 - Smooth animations and transitions
 - Custom cursor effect
 - Typing animation in hero section
-- Project showcase with categorization
 - Skills section with animated progress bars
 - Contact section with social links
+
+### New Features (v1.1)
+
+**Projects Section:**
+- Category filtering with buttons (All, Design Systems, UI Tools, Applications, Resources)
+- Real-time search by project name and technologies
+- Animated filtering with Framer Motion
+- Enhanced project cards with Demo and Repo links
+- Detailed technology stack for each project
+
+**Experience Section:**
+- Interactive timeline of work experience
+- Zigzag layout for desktop view
+- Key achievements with checkmarks
+- Technology stack for each position
+- Company links and dates
+
+**Presentation Mode:**
+- Automatic slideshow between sections (8 seconds)
+- Play/Pause controls
+- Keyboard navigation (Arrows, Space, F, Esc)
+- Fullscreen mode support
+- Section indicators and progress bar
+- Smooth scroll transitions
+
+**Enhanced Navigation:**
+- Added Experience section to menu
+- Presentation Mode button
+- Active section highlighting
+- Mobile responsive menu
 
 ## Tech Stack
 
@@ -69,7 +99,9 @@ portfolio/
 │   │   ├── CursorEffect.tsx   # Custom cursor component
 │   │   ├── Navigation.tsx     # Navigation bar
 │   │   ├── Hero.tsx           # Hero section
-│   │   ├── Projects.tsx       # Projects showcase
+│   │   ├── Projects.tsx       # Projects with filtering and search
+│   │   ├── Experience.tsx     # Work experience timeline
+│   │   ├── PresentationMode.tsx # Presentation slideshow mode
 │   │   ├── Skills.tsx         # Skills section
 │   │   ├── Contact.tsx        # Contact section
 │   │   ├── Footer.tsx         # Footer component
@@ -81,6 +113,8 @@ portfolio/
 │       ├── db.ts              # Database client (Prisma)
 │       └── utils.ts           # Utility functions
 ├── docs/
+│   ├── FEATURES.md           # New features documentation
+│   ├── STANDARDS.md           # Project standards
 │   ├── initial-prompt.html    # Original HTML design
 │   ├── initial-prompt.css     # Original CSS
 │   └── initial-prompt.js      # Original JavaScript
@@ -125,6 +159,12 @@ The project uses Tailwind CSS variables for theming. Default theme is dark indus
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
+## Documentation
+
+- **[FEATURES.md](docs/FEATURES.md)** - Detailed documentation of new features
+- **[STANDARDS.md](docs/STANDARDS.md)** - Project standards and guidelines
+- **[worklog.md](worklog.md)** - Agent work log and task tracking
+
 ## Standards
 
 This project follows:
@@ -132,8 +172,6 @@ This project follows:
 - **No-Unicode Policy v2.0** - No emojis or Unicode graphics in code
 - **Z.ai Reproducibility Standard v1.0** - Ensuring reproducible builds
 - **Worklog System** - Agent coordination and task tracking
-
-See the `docs/` directory for detailed standards documentation.
 
 ## License
 
