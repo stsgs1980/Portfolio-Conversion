@@ -12,15 +12,18 @@ Modern portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and sh
 - Typing animation in hero section
 - Skills section with animated progress bars
 - Contact section with social links
+- Dark/Light mode toggle with system preference detection
+- Page loader animation
 
-### New Features (v1.1)
+### New Features (v1.2)
 
 **Projects Section:**
 - Category filtering with buttons (All, Design Systems, UI Tools, Applications, Resources)
 - Real-time search by project name and technologies
 - Animated filtering with Framer Motion
 - Enhanced project cards with Demo and Repo links
-- Detailed technology stack for each project
+- Detailed project details in modal
+- Challenge/Solution/Results structure
 
 **Experience Section:**
 - Interactive timeline of work experience
@@ -37,11 +40,18 @@ Modern portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and sh
 - Section indicators and progress bar
 - Smooth scroll transitions
 
-**Enhanced Navigation:**
-- Added Experience section to menu
-- Presentation Mode button
-- Active section highlighting
-- Mobile responsive menu
+**New Sections:**
+- **Statistics** - Animated counters (Projects, Experience, Coffee, Technologies)
+- **How I Work** - Process flow (Discovery, Design, Develop, Deploy)
+- **Testimonials** - Carousel with client/colleague reviews
+- **Skills Radar Chart** - Visual skill distribution by category
+- **GitHub Activity Graph** - Contribution visualization (52 weeks)
+
+**Enhanced Features:**
+- **Theme Toggle** - Dark/Light mode with auto-detection
+- **Page Loader** - Loading animation on first visit
+- **Back to Top** - Floating button with scroll detection
+- **Project Details Modal** - Detailed project information
 
 ## Tech Stack
 
@@ -99,9 +109,19 @@ portfolio/
 │   │   ├── CursorEffect.tsx   # Custom cursor component
 │   │   ├── Navigation.tsx     # Navigation bar
 │   │   ├── Hero.tsx           # Hero section
+│   │   ├── PageLoader.tsx      # Page loading animation
+│   │   ├── BackToTop.tsx       # Back to top button
+│   │   ├── Statistics.tsx       # Statistics with animated counters
+│   │   ├── HowIWork.tsx       # Work process flow
+│   │   ├── Testimonials.tsx     # Testimonials carousel
+│   │   ├── SkillsRadar.tsx     # Radar chart skills
+│   │   ├── GitHubActivityGraph.tsx # GitHub activity graph
+│   │   ├── ProjectDetailsModal.tsx # Project details modal
+│   │   ├── ThemeToggle.tsx     # Theme toggle
+│   │   ├── PresentationMode.tsx # Presentation slideshow mode
+│   │   ├── Hero.tsx           # Hero section
 │   │   ├── Projects.tsx       # Projects with filtering and search
 │   │   ├── Experience.tsx     # Work experience timeline
-│   │   ├── PresentationMode.tsx # Presentation slideshow mode
 │   │   ├── Skills.tsx         # Skills section
 │   │   ├── Contact.tsx        # Contact section
 │   │   ├── Footer.tsx         # Footer component
@@ -173,9 +193,33 @@ This project follows:
 - **Z.ai Reproducibility Standard v1.0** - Ensuring reproducible builds
 - **Worklog System** - Agent coordination and task tracking
 
-## License
+## Version History
 
-This project is open source and available under the MIT License.
+### v1.2 (Current)
+- Added PageLoader with loading animation
+- Added BackToTop button with scroll detection
+- Added Statistics section with animated counters
+- Added How I Work section with process flow
+- Added Testimonials carousel with reviews
+- Added Skills Radar chart visualization
+- Added GitHub Activity graph
+- Added Project Details modal
+- Added Theme Toggle with dark/light mode
+- Added keyboard navigation for modal (Esc to close)
+
+### v1.1
+- Added project filtering and search
+- Added Experience timeline section
+- Added Presentation Mode with auto-scroll
+- Enhanced project cards with Demo and Repo links
+- Added Experience link to navigation
+
+### v1.0
+- Initial release with core portfolio functionality
+- Hero, Projects, Skills, Contact sections
+- Custom cursor effect
+- Smooth animations
+- Responsive design
 
 ## Contact
 

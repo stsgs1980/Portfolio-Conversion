@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useMemo } from 'react'
 import { ArrowUpRight, Search, X } from 'lucide-react'
+import { ProjectDetailsModal } from './ProjectDetailsModal'
 
 interface Project {
   id: string
@@ -14,7 +15,11 @@ interface Project {
   link: string
   demo?: string
   repo?: string
-  fullDescription?: string
+  fullDescription: string
+  challenge: string
+  solution: string
+  results: string[]
+  images: string[]
 }
 
 interface ProjectCategory {
@@ -35,7 +40,11 @@ const projectCategories: ProjectCategory[] = [
         tech: ['React', 'TypeScript', 'Framer Motion'],
         link: '#',
         demo: 'https://demo.example.com',
-        repo: 'https://github.com/Sts8987/designsystems-hub'
+        repo: 'https://github.com/Sts8987/designsystems-hub',
+        fullDescription: 'Полнофункциональная дизайн-система, созданная для использования в enterprise приложениях. Включает более 50 готовых компонентов, полную документацию и примеры использования. Система поддерживает темизацию и локализацию.',
+        challenge: 'Создать масштабируемую дизайн-систему для разных продуктов компании с едиными стандартами',
+        solution: 'Разработал модульную архитектуру компонентов с использованием Composition API, создал Storybook для документации, внедрил CI/CD для автоматического тестирования',
+        results: ['Уменьшение времени разработки на 40%', 'Единый стиль UI across 5 продуктов', 'Команда из 10+ дизайнеров использует систему']
       },
       {
         id: '2',
@@ -164,6 +173,7 @@ const projectCategories: ProjectCategory[] = [
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [searchQuery, setSearchQuery] = useState('')
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const categories = ['All', ...projectCategories.map(cat => cat.title)]
 
@@ -268,7 +278,11 @@ export function Projects() {
       >
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard 
+              key={project.id} 
+              project={project} 
+              onProjectClick={setSelectedProject}
+            />
           ))}
         </AnimatePresence>
       </motion.div>
@@ -284,11 +298,18 @@ export function Projects() {
           <p className="text-sm mt-2">Попробуйте изменить фильтр или поисковый запрос</p>
         </motion.div>
       )}
+
+      {/* Project Details Modal */}
+      <ProjectDetailsModal
+        project={selectedProject}
+        isOpen={selectedProject !== null}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   )
 }
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, onProjectClick }: { project: Project; onProjectClick: (project: Project) => void }) {
   const [rotateX, setRotateX] = useState(0)
   const [rotateY, setRotateY] = useState(0)
 
@@ -309,6 +330,10 @@ function ProjectCard({ project }: { project: Project }) {
     setRotateY(0)
   }
 
+  const handleClick = () => {
+    onProjectClick(project)
+  }
+
   return (
     <motion.article
       className="project-card bg-neutral-900 border border-neutral-800 p-6 relative overflow-hidden cursor-pointer group"
@@ -317,6 +342,7 @@ function ProjectCard({ project }: { project: Project }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3 }}
+      onClick={handleClick}
       style={{
         transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`,
         transition: 'transform 0.1s ease-out, box-shadow 0.3s ease, border-color 0.3s ease'

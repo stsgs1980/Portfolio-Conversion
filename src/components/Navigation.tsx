@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X, Play } from 'lucide-react'
+import { ThemeToggle } from './ThemeToggle'
 
 interface NavigationProps {
   onPresentationModeToggle?: () => void
@@ -98,17 +99,23 @@ export function Navigation({ onPresentationModeToggle }: NavigationProps) {
             </a>
           ))}
 
-          {/* Presentation Mode Button */}
-          {onPresentationModeToggle && (
-            <button
-              onClick={onPresentationModeToggle}
-              className="flex items-center gap-2 px-4 py-2 bg-indigo-600/20 text-indigo-500 hover:bg-indigo-600 hover:text-white rounded-lg transition-all text-sm font-medium"
-              aria-label="Start presentation mode"
-            >
-              <Play size={14} />
-              <span className="hidden lg:inline">Презентация</span>
-            </button>
-          )}
+          {/* Right Actions */}
+          <div className="flex items-center gap-3">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+            
+            {/* Presentation Mode Button */}
+            {onPresentationModeToggle && (
+              <button
+                onClick={onPresentationModeToggle}
+                className="flex items-center gap-2 px-4 py-2 bg-indigo-600/20 text-indigo-500 hover:bg-indigo-600 hover:text-white rounded-lg transition-all text-sm font-medium"
+                aria-label="Start presentation mode"
+              >
+                <Play size={14} />
+                <span className="hidden lg:inline">Презентация</span>
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -139,18 +146,24 @@ export function Navigation({ onPresentationModeToggle }: NavigationProps) {
                 {link.label}
               </a>
             ))}
-            {onPresentationModeToggle && (
-              <button
-                onClick={() => {
-                  onPresentationModeToggle()
-                  setIsMobileMenuOpen(false)
-                }}
-                className="flex items-center gap-2 px-4 py-2 bg-indigo-600/20 text-indigo-500 hover:bg-indigo-600 hover:text-white rounded-lg transition-all text-sm font-medium text-left"
-              >
-                <Play size={14} />
-                <span>Презентация</span>
-              </button>
-            )}
+            
+            {/* Mobile Right Actions */}
+            <div className="flex items-center gap-3 pt-2 border-t border-neutral-800">
+              <ThemeToggle />
+              
+              {onPresentationModeToggle && (
+                <button
+                  onClick={() => {
+                    onPresentationModeToggle()
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="flex items-center gap-2 px-4 py-2 bg-indigo-600/20 text-indigo-500 hover:bg-indigo-600 hover:text-white rounded-lg transition-all text-sm font-medium flex-1"
+                >
+                  <Play size={14} />
+                  <span>Презентация</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
       )}
