@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Design & Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor effect -->
+    <div class="cursor-effect" id="cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-bracket">&lt;</span>
+                <span class="brand-text">PORTFOLIO</span>
+                <span class="brand-bracket">/&gt;</span>
+            </div>
+            <div class="nav-links">
+                <a href="#projects" class="nav-link">Проекты</a>
+                <a href="#skills" class="nav-link">Навыки</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-line">
+                <span class="line-number">01</span>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="word">DESIGN</span>
+                        <span class="word">&</span>
+                        <span class="word">DEVELOPMENT</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="hero-subtitle">
+                <p class="typing-text">Создаю интерфейсы для цифрового будущего</p>
+            </div>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Стек</span>
+                    <span class="meta-value">React • TypeScript • Design Systems</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="grid-lines"></div>
+            <div class="floating-element">
+                <svg viewBox="0 0 100 100" class="element-svg">
+                    <rect x="10" y="10" width="80" height="80" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                    <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" stroke-width="0.3"/>
+                    <rect x="30" y="30" width="40" height="40" fill="none" stroke="currentColor" stroke-width="0.2"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">ПРОЕКТЫ</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Design Systems Category -->
+            <div class="project-category">
+                <h3 class="category-title">Design Systems</h3>
+                <div class="category-projects">
+                    <article class="project-card" data-category="design-systems">
+                        <div class="card-header">
+                            <span class="card-number">001</span>
+                            <span class="card-tag">React</span>
+                        </div>
+                        <h4 class="card-title">DesignSystems Hub</h4>
+                        <p class="card-description">Индустриальная дизайн-система с компонентами для сложных интерфейсов</p>
+                        <div class="card-tech">
+                            <span class="tech-item">React</span>
+                            <span class="tech-item">TypeScript</span>
+                        </div>
+                        <a href="DesignSystems Hub_industrial/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-card" data-category="design-systems">
+                        <div class="card-header">
+                            <span class="card-number">002</span>
+                            <span class="card-tag">Design</span>
+                        </div>
+                        <h4 class="card-title">DS Reference</h4>
+                        <p class="card-description">Справочник по дизайн-системам и паттернам UI</p>
+                        <div class="card-tech">
+                            <span class="tech-item">Documentation</span>
+                            <span class="tech-item">UI Patterns</span>
+                        </div>
+                        <a href="DS reference_150326/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-card" data-category="design-systems">
+                        <div class="card-header">
+                            <span class="card-number">003</span>
+                            <span class="card-tag">Tool</span>
+                        </div>
+                        <h4 class="card-title">Color Picker Panel</h4>
+                        <p class="card-description">Панель для выбора и генерации цветовых палитр</p>
+                        <div class="card-tech">
+                            <span class="tech-item">Colors</span>
+                            <span class="tech-item">Palette</span>
+                        </div>
+                        <a href="Color Picker Panel/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- UI Tools Category -->
+            <div class="project-category">
+                <h3 class="category-title">UI Tools</h3>
+                <div class="category-projects">
+                    <article class="project-card" data-category="ui-tools">
+                        <div class="card-header">
+                            <span class="card-number">004</span>
+                            <span class="card-tag">Comparison</span>
+                        </div>
+                        <h4 class="card-title">UI Library Compare</h4>
+                        <p class="card-description">Сравнительный обзор UI библиотек для React</p>
+                        <div class="card-tech">
+                            <span class="tech-item">React</span>
+                            <span class="tech-item">V0app</span>
+                        </div>
+                        <a href="UI Library Compare_V0app/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-card" data-category="ui-tools">
+                        <div class="card-header">
+                            <span class="card-number">005</span>
+                            <span class="card-tag">Matrix</span>
+                        </div>
+                        <h4 class="card-title">UI Matrix</h4>
+                        <p class="card-description">Матрица UI компонентов и паттернов</p>
+                        <div class="card-tech">
+                            <span class="tech-item">Components</span>
+                            <span class="tech-item">Patterns</span>
+                        </div>
+                        <a href="UI Matrix/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-card" data-category="ui-tools">
+                        <div class="card-header">
+                            <span class="card-number">006</span>
+                            <span class="card-tag">Template</span>
+                        </div>
+                        <h4 class="card-title">Radix Template</h4>
+                        <p class="card-description">Шаблон на базе Radix UI для быстрого старта</p>
+                        <div class="card-tech">
+                            <span class="tech-item">Radix UI</span>
+                            <span class="tech-item">Template</span>
+                        </div>
+                        <a href="Radix Template/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Applications Category -->
+            <div class="project-category">
+                <h3 class="category-title">Applications</h3>
+                <div class="category-projects">
+                    <article class="project-card" data-category="applications">
+                        <div class="card-header">
+                            <span class="card-number">007</span>
+                            <span class="card-tag">App</span>
+                        </div>
+                        <h4 class="card-title">Notes App</h4>
+                        <p class="card-description">Приложение для заметок с современным интерфейсом</p>
+                        <div class="card-tech">
+                            <span class="tech-item">React</span>
+                            <span class="tech-item">State Management</span>
+                        </div>
+                        <a href="notes-app/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-card" data-category="applications">
+                        <div class="card-header">
+                            <span class="card-number">008</span>
+                            <span class="card-tag">Example</span>
+                        </div>
+                        <h4 class="card-title">Design System App</h4>
+                        <p class="card-description">Пример приложения с дизайн-системой (Bun + React)</p>
+                        <div class="card-tech">
+                            <span class="tech-item">Bun</span>
+                            <span class="tech-item">React</span>
+                        </div>
+                        <a href="design-system-app_light example bun react/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-card" data-category="applications">
+                        <div class="card-header">
+                            <span class="card-number">009</span>
+                            <span class="card-tag">Portfolio</span>
+                        </div>
+                        <h4 class="card-title">Dev.Studio Portfolio</h4>
+                        <p class="card-description">Портфолио разработчика с современным дизайном</p>
+                        <div class="card-tech">
+                            <span class="tech-item">Portfolio</span>
+                            <span class="tech-item">Showcase</span>
+                        </div>
+                        <a href="dev.studio 2 portfolio/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Resources Category -->
+            <div class="project-category">
+                <h3 class="category-title">Ресурсы</h3>
+                <div class="category-projects">
+                    <article class="project-card" data-category="resources">
+                        <div class="card-header">
+                            <span class="card-number">010</span>
+                            <span class="card-tag">Guide</span>
+                        </div>
+                        <h4 class="card-title">UI Stack Guide</h4>
+                        <p class="card-description">Руководство по выбору технологического стека для UI</p>
+                        <div class="card-tech">
+                            <span class="tech-item">Guide</span>
+                            <span class="tech-item">Documentation</span>
+                        </div>
+                        <a href="ui stack guide/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-card" data-category="resources">
+                        <div class="card-header">
+                            <span class="card-number">011</span>
+                            <span class="card-tag">Docs</span>
+                        </div>
+                        <h4 class="card-title">JavaScript/TypeScript</h4>
+                        <p class="card-description">Материалы по JavaScript и TypeScript</p>
+                        <div class="card-tech">
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">TypeScript</span>
+                        </div>
+                        <a href="JavaScript_TypeScript/" class="card-link">
+                            <span>Открыть</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">НАВЫКИ</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4 class="skill-category">Frontend</h4>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">TypeScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CSS / SCSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h4 class="skill-category">Design Systems</h4>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Radix UI</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Figma</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Component Architecture</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h4 class="skill-category">Tools</h4>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Vite</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Bun</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Git</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">КОНТАКТЫ</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="contact-content">
+            <p class="contact-text">Открыт для новых проектов и коллабораций</p>
+
+            <div class="contact-links">
+                <a href="mailto:hello@portfolio.com" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com" target="_blank" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Portfolio. Создано с кодом и креативностью.</p>
+            <p class="footer-meta">Design & Development</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
