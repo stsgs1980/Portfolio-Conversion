@@ -15,7 +15,49 @@ Modern portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and sh
 - Dark/Light mode toggle with system preference detection
 - Page loader animation
 
-### New Features (v1.2)
+## New Features (v1.3)
+
+**Interactive Elements (7 effects):**
+- **ScrollProgressIndicator** - Progress bar at the top showing scroll position
+- **MagneticButton** - Buttons that attract to cursor
+- **ParallaxSection** - Parallax scrolling effect for sections
+- **SmoothImageReveal** - Smooth image reveal with blur and scale
+- **TextReveal / CharReveal** - Word/character reveal animations
+- **MarqueeBanner / VerticalMarquee** - Infinite scrolling text
+- **GlitchEffect / AutoGlitch** - Glitch effect with RGB split
+
+**Background Effects (5 effects):**
+- **AnimatedBackgroundPattern** - Animated gradient background with floating orbs
+- **ParticleSystem** - Interactive particles responding to cursor
+- **GradientOrbs** - Floating gradient orbs
+- **GridAnimation** - Animated grid on background
+- **NoiseTexture** - Noise texture for depth
+
+**UX Enhancements (3 effects):**
+- **SkeletonLoader** - Loading placeholders
+- **ToastNotifications** - Toast notification system
+- **KeyboardShortcutsTooltip** - Keyboard shortcuts help (press ?)
+
+**Advanced Animations (4 effects):**
+- **PageTransitions** - Multiple transition variants (fade, slide, scale)
+- **TextScrambleEffect** - Text decryption effect
+- **MorphingShapes** - Morphing geometric shapes
+- **FloatingElements3D** - 3D elements with parallax
+
+**Portfolio Specific (5 effects):**
+- **Skills3DVisualization** - 3D interactive skills visualization
+- **TimelineAnimation** - Advanced timeline animation
+- **ProjectCardHover** - Enhanced hover effects for projects
+- **TestimonialsAutoScroll** - Auto-scrolling testimonials
+- **ContactFormAnimations** - Animated contact form
+
+**Documentation:**
+- Comprehensive effects documentation in [docs/EFFECTS.md](docs/EFFECTS.md)
+- 25+ effects with examples and usage guides
+- Performance optimization tips
+- Mobile device recommendations
+
+**New Features (v1.2)**
 
 **Projects Section:**
 - Category filtering with buttons (All, Design Systems, UI Tools, Applications, Resources)
@@ -181,7 +223,8 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for de
 
 ## Documentation
 
-- **[FEATURES.md](docs/FEATURES.md)** - Detailed documentation of new features
+- **[FEATURES.md](docs/FEATURES.md)** - Detailed documentation of v1.1 and v1.2 features
+- **[EFFECTS.md](docs/EFFECTS.md)** - Complete guide to all 25+ visual effects (v1.3)
 - **[STANDARDS.md](docs/STANDARDS.md)** - Project standards and guidelines
 - **[worklog.md](worklog.md)** - Agent work log and task tracking
 
@@ -195,7 +238,18 @@ This project follows:
 
 ## Version History
 
-### v1.2 (Current)
+### v1.3 (Current) - Major Effects Update
+- Added 25+ visual effects and animations
+- Interactive: ScrollProgress, Magnetic Buttons, Parallax, Image Reveal, Text Reveal, Marquee, Glitch
+- Background: Animated Pattern, Particle System, Gradient Orbs, Grid, Noise Texture
+- UX: Skeleton Loaders, Toast Notifications, Keyboard Shortcuts
+- Advanced: Page Transitions, Text Scramble, Morphing Shapes, 3D Floating Elements
+- Portfolio: 3D Skills, Timeline Animation, Project Hover, Auto-scroll Testimonials, Contact Form
+- Integrated ScrollProgressIndicator, AnimatedBackgroundPattern, ParticleSystem, NoiseTexture
+- Added ToastProvider and KeyboardShortcutsTooltip with 7 shortcuts
+- Full documentation in docs/EFFECTS.md
+
+### v1.2
 - Added PageLoader with loading animation
 - Added BackToTop button with scroll detection
 - Added Statistics section with animated counters
