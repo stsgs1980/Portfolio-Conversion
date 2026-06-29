@@ -2,6 +2,34 @@
 
 Modern portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and shadcn/ui.
 
+
+[![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square)](https://www.typescriptlang.org)
+[![Tailwind_CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square)](https://tailwindcss.com)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square)](https://nodejs.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+
+## Table of Contents
+
+- [Features](#features)
+- [New Features (v1.3)](#new-features-v13)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [or](#or)
+- [or](#or)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Configuration](#configuration)
+- [Browser Support](#browser-support)
+- [Contributing](#contributing)
+- [Documentation](#documentation)
+- [Standards](#standards)
+- [Version History](#version-history)
+- [Contact](#contact)
+- [License](#license)
+
 ## Features
 
 ### Core Features
@@ -109,7 +137,7 @@ Modern portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and sh
 ### Prerequisites
 
 - Node.js 20+ or Bun 1.3+
-- npm, yarn, or bun package manager
+- Bun package manager
 
 ### Installation
 
@@ -124,23 +152,23 @@ cd Portfolio-Conversion
 
 ```bash
 bun install
-# or
-npm install
+## or
+bun install
 ```
 
 3. Run the development server:
 
 ```bash
 bun run dev
-# or
-npm run dev
+## or
+bun run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Project Structure
 
-```
+```bash
 portfolio/
 ├── src/
 │   ├── app/
@@ -280,6 +308,9 @@ This project follows:
 - Email: hello@portfolio.com
 - GitHub: [Sts8987](https://github.com/Sts8987)
 
----
 
 Built with: Next.js 16 + TypeScript + Tailwind CSS + shadcn/ui
+
+## License
+
+[MIT](LICENSE)
